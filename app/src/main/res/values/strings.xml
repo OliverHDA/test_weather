@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">test_weather</string>
+    <string name="weather_icon_description">Weather Icon</string>
+    <string name="current_temperature">20</string>
+    <string name="celsius">°C</string>
+    <string name="weather_condition">Солнечно</string>
+    <string name="saint_petersburg">Санкт-Петербург</string>
+    <string name="moscow">Москва</string>
+    <string name="fab_description">Floating Action Button</string>
+    <string name="date">Пн, 24 Февраля</string>
+</resources>

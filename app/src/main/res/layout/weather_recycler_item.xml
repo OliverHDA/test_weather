@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/small_margin"
+    app:cardCornerRadius="@dimen/card_view_corner_radius"
+    app:cardElevation="@dimen/card_view_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/weather_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/weatherRecyclerIcon"
+            android:layout_width="@dimen/weather_item_recycler_size"
+            android:layout_height="@dimen/weather_item_recycler_size"
+            android:layout_marginStart="@dimen/middle_margin"
+            android:contentDescription="@string/weather_icon_description"
+            android:src="@drawable/ic_baseline_wb_sunny_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/temperatureRecycler"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/temperatureRecycler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:text="@string/current_temperature"
+            android:textSize="@dimen/recycler_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/celsiusRecycler"
+            app:layout_constraintStart_toEndOf="@+id/weatherRecyclerIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/celsiusRecycler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/celsius"
+            android:textSize="@dimen/recycler_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/temperatureRecycler"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/date_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/middle_margin"
+            android:text="@string/date"
+            android:textAlignment="center"
+            android:textSize="@dimen/recycler_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
