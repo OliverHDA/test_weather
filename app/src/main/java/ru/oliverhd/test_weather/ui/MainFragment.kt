@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TableLayout
 import android.widget.Toast
 import kotlinx.android.synthetic.main.main_fragment.*
 import androidx.lifecycle.Observer
@@ -14,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import com.google.android.material.tabs.TabLayout
-import ru.oliverhd.test_weather.MainViewModel
+import ru.oliverhd.test_weather.view_model.MainViewModel
 import ru.oliverhd.test_weather.R
 import ru.oliverhd.test_weather.app.AppData
 
@@ -81,7 +80,6 @@ class MainFragment : Fragment() {
                 weatherConditionTextView.text = serverResponseData.current.weather[0].description
             }
             is AppData.Loading -> {
-                main.visibility = View.GONE
                 main_fragment_loading_layout.visibility = View.VISIBLE
             }
             is AppData.Error -> {

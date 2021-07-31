@@ -1,4 +1,4 @@
-package ru.oliverhd.test_weather
+package ru.oliverhd.test_weather.view_model
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -8,11 +8,12 @@ import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import ru.oliverhd.test_weather.BuildConfig
 import ru.oliverhd.test_weather.app.App
 import ru.oliverhd.test_weather.app.AppData
 import ru.oliverhd.test_weather.model.WeatherResponseData
 import ru.oliverhd.test_weather.repository.RepositoryImpl
-import ru.oliverhd.test_weather.repository.WeatherRetrofitImpl
+import ru.oliverhd.test_weather.retrofit.WeatherRetrofitImpl
 import ru.oliverhd.test_weather.room.convertWeatherToWeatherEntity
 
 
