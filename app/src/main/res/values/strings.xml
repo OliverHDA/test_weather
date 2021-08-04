@@ -1,11 +1,24 @@
 <resources>
-    <string name="app_name">test_weather</string>
-    <string name="weather_icon_description">Weather Icon</string>
+    <string name="app_name">Weather</string>
     <string name="current_temperature">20</string>
     <string name="celsius">°C</string>
     <string name="weather_condition">Солнечно</string>
     <string name="saint_petersburg">Санкт-Петербург</string>
     <string name="moscow">Москва</string>
-    <string name="fab_description">Floating Action Button</string>
     <string name="date">Пн, 24 Февраля</string>
+
+    <string name="weather_icon_description">Weather Icon</string>
+    <string name="fab_description">Floating Action Button</string>
+    <string name="my_location_icon_description">My Location Icon</string>
+
+    <string name="dialog_rationale_title">Доступ к геолокации</string>
+    <string name="dialog_rationale_message">Для отображения погоды по вашему местоположению небходим доступ к геолокации</string>
+    <string name="dialog_rationale_give_access">Предоставить доступ</string>
+    <string name="dialog_rationale_decline">Не надо</string>
+    <string name="dialog_title_no_gps">Доступ к геолокации закрыт</string>
+    <string name="dialog_message_no_gps">Разрешите доступ к геолокации, чтобы получить погоду по вашему местоположению.</string>
+    <string name="dialog_button_close">Закрыть</string>
+    <string name="dialog_title_gps_turned_off">GPS отключён</string>
+    <string name="dialog_message_last_location_unknown">Местонахождение неизвестно.
+Включите GPS, чтобы получить погоду по вашему местоположению.</string>
 </resources>

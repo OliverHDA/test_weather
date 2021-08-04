@@ -1,4 +1,4 @@
-package ru.oliverhd.test_weather.repository
+package ru.oliverhd.test_weather.retrofit
 
 import com.google.gson.GsonBuilder
 import okhttp3.Interceptor
