@@ -9,13 +9,11 @@ import ru.oliverhd.test_weather.room.WeatherEntity
 import ru.oliverhd.test_weather.room.convertWeatherEntityToWeatherData
 import java.text.DecimalFormat
 
-const val ONE_HOUR: Long = 3600000
-const val TEN_SEC: Long = 10000
-
-const val REQUEST_LANGUAGE: String = "ru"
-const val REQUEST_EXCLUDE: String = "minutely,hourly,alerts"
-const val REQUEST_UNITS_OF_MEASUREMENT: String = "metric"
-const val SQL_DOUBLE_FORMAT_PATTERN: String = "##.####"
+private const val ONE_HOUR: Long = 3600000
+private const val REQUEST_LANGUAGE: String = "ru"
+private const val REQUEST_EXCLUDE: String = "minutely,hourly,alerts"
+private const val REQUEST_UNITS_OF_MEASUREMENT: String = "metric"
+private const val SQL_DOUBLE_FORMAT_PATTERN: String = "##.####"
 
 class RepositoryImpl(private val server: WeatherRetrofitImpl, private val local: WeatherDao) :
     Repository {
@@ -47,7 +45,7 @@ class RepositoryImpl(private val server: WeatherRetrofitImpl, private val local:
         val entity: WeatherEntity? =
             local.getWeatherFromRoom(df.format(lat).toDouble(), df.format(lon).toDouble())
         entity?.let {
-            if (System.currentTimeMillis() - entity.currentTime > TEN_SEC) {
+            if (System.currentTimeMillis() - entity.currentTime > ONE_HOUR) {
                 return null
             } else {
                 return convertWeatherEntityToWeatherData(it)

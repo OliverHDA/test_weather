@@ -16,7 +16,6 @@ import ru.oliverhd.test_weather.repository.RepositoryImpl
 import ru.oliverhd.test_weather.retrofit.WeatherRetrofitImpl
 import ru.oliverhd.test_weather.room.convertWeatherToWeatherEntity
 
-
 class MainViewModel(
     private val liveDataToObserve: MutableLiveData<AppData> = MutableLiveData(),
     private val repositoryImpl: RepositoryImpl = RepositoryImpl(
@@ -54,13 +53,11 @@ class MainViewModel(
         ) {
             if (response.isSuccessful && response.body() != null) {
 
-                val jsonObject = JSONObject(Gson().toJson(response.body()))
-                val s: String = jsonObject.toString()
                 repositoryImpl.saveWeather(
                     convertWeatherToWeatherEntity(
                         response.body()!!.lat,
                         response.body()!!.lon,
-                        s
+                        JSONObject(Gson().toJson(response.body())).toString()
                     )
                 )
 

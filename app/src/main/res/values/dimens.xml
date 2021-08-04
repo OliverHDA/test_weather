@@ -11,4 +11,8 @@
     <dimen name="weather_item_recycler_size">64dp</dimen>
     <dimen name="middle_margin">24dp</dimen>
     <dimen name="recycler_text_size">20sp</dimen>
+    <dimen name="location_icon_size">50dp</dimen>
+    <dimen name="info_window_weather_icon_size">50dp</dimen>
+    <dimen name="info_window_temperature_text_size">25sp</dimen>
+    <dimen name="info_window_condition_text_size">16sp</dimen>
 </resources>

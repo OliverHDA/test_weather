@@ -51,6 +51,6 @@ class WeatherRecyclerAdapter() : RecyclerView.Adapter<WeatherRecyclerAdapter.Wea
     inner class WeatherViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var iconImageView: ImageView = itemView.findViewById(R.id.weatherRecyclerIcon)
         var temperatureTextView: TextView = itemView.findViewById(R.id.temperatureRecycler)
-        var date: TextView = itemView.findViewById(R.id.date_text_view)
+        var date: TextView = itemView.findViewById(R.id.dateTextView)
     }
 }
